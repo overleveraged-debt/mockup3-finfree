@@ -1,0 +1,455 @@
+<![CDATA[<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinFree - Your Financial Freedom Partner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-image: url(https://www.transparenttextures.com/patterns/cream-paper.png);
+        }
+    </style>
+</head>
+<body class="text-gray-800 pt-28">
+    <!-- Header/Nav -->
+    <header class="bg-gray-100/60 backdrop-blur-xl py-2 px-4 flex justify-between items-center shadow-lg fixed top-4 left-4 right-4 z-20 rounded-full">
+        <!-- Logo -->
+        <a href="#" class="flex-shrink-0">
+            <div class="text-2xl font-bold text-indigo-700">FinFree</div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden lg:flex flex-grow items-center mx-4 bg-white rounded-full shadow-inner overflow-hidden h-14">
+            <!-- Text Links -->
+            <nav class="flex items-center pl-2">
+                <a href="#hero" class="px-4 py-2 text-gray-600 hover:text-indigo-700 font-medium rounded-full hover:bg-gray-100 transition-colors">Home</a>
+                <a href="#about" class="px-4 py-2 text-gray-600 hover:text-indigo-700 font-medium rounded-full hover:bg-gray-100 transition-colors">About</a>
+                <a href="#blog" class="px-4 py-2 text-gray-600 hover:text-indigo-700 font-medium rounded-full hover:bg-gray-100 transition-colors">Blog</a>
+            </nav>
+            <!-- Gradient Bar for Service -->
+            <div class="flex-grow h-full bg-gradient-to-r from-white/10 via-blue-200 to-blue-500 flex justify-end items-center rounded-r-full">
+                <a href="#services" class="px-6 py-2 text-white font-semibold">Service</a>
+            </div>
+        </div>
+        
+        <!-- Contact Button -->
+        <a href="#contact" class="hidden sm:flex flex-shrink-0 bg-blue-600 text-white px-6 h-14 items-center justify-center rounded-full font-semibold shadow-md hover:bg-blue-700 transition-colors">CONTACT</a>
+
+        <!-- Mobile Menu Button -->
+        <div class="lg:hidden">
+            <button class="w-14 h-14 flex items-center justify-center">
+                <i class="fas fa-bars text-2xl text-gray-700"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="bg-white py-16 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-12">
+            <div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
+                    Your path to financial freedom<br>begins here.
+                </h1>
+                <p class="text-lg text-gray-600 mb-8">
+                    Stop worrying about complex banking products. We provide expert, unbiased guidance to find the perfect loans, credit cards, and investments for you.
+                </p>
+                <div class="flex items-center space-x-4">
+                    <a href="#services" class="bg-indigo-700 text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-indigo-800 transition-colors flex items-center group">
+                        Explore our services
+                        <i class="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="relative hidden md:block">
+                <!-- Improved SVG of a phone and cards -->
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
+                    <defs>
+                        <linearGradient id="phoneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#a5b4fc;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="cardGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="cardGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#818cf8;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#a5b4fc;stop-opacity:1" />
+                        </linearGradient>
+                        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                            <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+                            <feOffset dx="2" dy="4"/>
+                            <feMerge>
+                                <feMergeNode/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+
+                    <!-- Phone Body -->
+                    <rect x="125" y="25" rx="30" ry="30" width="200" height="350" fill="url(#phoneGradient)" class="shadow-2xl"/>
+                    <rect x="135" y="35" rx="20" ry="20" width="180" height="330" fill="#f9fafb"/>
+                    <rect x="195" y="45" rx="3" ry="3" width="60" height="6" fill="#d1d5db"/> <!-- Notch -->
+                    
+                    <!-- Phone Screen Content -->
+                    <g>
+                        <!-- Header -->
+                        <circle cx="160" cy="70" r="10" fill="#c7d2fe"/>
+                        <text x="178" y="74" font-family="Inter" font-size="10" fill="#333" font-weight="600">Hello, Rhea</text>
+                        
+                        <!-- Balance Card -->
+                        <text x="150" y="105" font-family="Inter" font-size="9" fill="#6b7280">Your Balance</text>
+                        <text x="150" y="125" font-family="Inter" font-size="18" fill="#111827" font-weight="800">$12,450.78</text>
+
+                        <!-- Mini Chart -->
+                        <rect x="150" y="150" width="150" height="80" fill="#eef2ff" rx="10"/>
+                        <rect x="160" y="190" width="15" height="30" fill="#818cf8" rx="3"/>
+                        <rect x="180" y="175" width="15" height="45" fill="#818cf8" rx="3"/>
+                        <rect x="200" y="195" width="15" height="25" fill="#818cf8" rx="3"/>
+                        <rect x="220" y="160" width="15" height="60" fill="#6366f1" rx="3"/>
+                        <rect x="240" y="185" width="15" height="35" fill="#818cf8" rx="3"/>
+                        <rect x="260" y="200" width="15" height="20" fill="#818cf8" rx="3"/>
+
+                        <!-- Action Buttons -->
+                        <rect x="150" y="245" width="150" height="35" fill="#fff" rx="8" style="stroke:#e5e7eb; stroke-width:1;"/>
+                        <circle cx="168" cy="262.5" r="8" fill="#eef2ff"/>
+                        <path d="M 165 262.5 L 171 262.5 M 168 259.5 L 168 265.5" stroke="#6366f1" stroke-width="1.5" stroke-linecap="round"/>
+                        <text x="184" y="266" font-family="Inter" font-size="10" fill="#333" font-weight="500">View Transactions</text>
+
+                        <rect x="150" y="290" width="150" height="35" fill="#fff" rx="8" style="stroke:#e5e7eb; stroke-width:1;"/>
+                        <circle cx="168" cy="307.5" r="8" fill="#eef2ff"/>
+                        <path d="M 168 304.5 L 168 310.5 M 165 307.5 L 171 307.5" stroke="#6366f1" stroke-width="1.5" stroke-linecap="round"/>
+                        <text x="184" y="311" font-family="Inter" font-size="10" fill="#333" font-weight="500">Add New Account</text>
+                    </g>
+
+                    <!-- Card 1 (Back) -->
+                    <g transform="rotate(-10 150 300) translate(20, 0)" style="filter:url(#shadow)">
+                        <rect x="50" y="200" rx="15" ry="15" width="180" height="110" fill="url(#cardGradient2)"/>
+                        <text x="70" y="225" font-family="Inter" font-size="10" fill="#fff">CARD HOLDER</text>
+                        <text x="70" y="245" font-family="Inter" font-size="14" fill="#fff" font-weight="600">Rhea Jain</text>
+                        <text x="180" y="295" font-family="Inter" font-size="14" fill="#fff" class="font-bold" text-anchor="middle">MC</text>
+                    </g>
+                    
+                    <!-- Card 2 (Front) -->
+                    <g transform="rotate(10 250 280) translate(0, 0)" style="filter:url(#shadow)">
+                        <rect x="150" y="180" rx="15" ry="15" width="180" height="110" fill="url(#cardGradient1)"/>
+                        <text x="170" y="205" font-family="Inter" font-size="12" fill="#fff" font-weight="bold">VISA</text>
+                        <text x="170" y="240" font-family="monospace" font-size="14" fill="#fff">1234 5678 9012 3456</text>
+                        <text x="170" y="265" font-family="Inter" font-size="10" fill="#fff">VALID</text>
+                        <text x="170" y="275" font-family="Inter" font-size="10" fill="#fff">THRU</text>
+                        <text x="200" y="275" font-family="monospace" font-size="12" fill="#fff">11/25</text>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Section (Updated) -->
+    <section id="services" class="bg-white py-16 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-gray-200 text-gray-600 px-4 py-1 rounded-full text-sm font-semibold mb-4">Loan Services</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mb-2">Our comprehensive loan solutions</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto">Find the perfect loan for your needs with expert guidance and seamless processing.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Home Loans Card -->
+                <div class="bg-indigo-700 text-white p-8 rounded-2xl shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-indigo-500 text-white">
+                                <i class="fas fa-home fa-lg"></i>
+                            </span>
+                            <span class="text-xl font-bold ml-4">Home Loans</span>
+                        </div>
+                        <p class="text-gray-300">
+                            Fulfill your dream of owning a home with our extensive range of home loan options from top lenders at competitive rates.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Business Loans Card -->
+                <div class="bg-lime-400 p-8 rounded-2xl shadow-lg text-gray-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-lime-500 text-white">
+                                <i class="fas fa-chart-bar fa-lg"></i>
+                            </span>
+                            <span class="text-xl font-bold ml-4">Business Loans</span>
+                        </div>
+                        <p class="text-gray-700">
+                            Get the capital you need to start or expand your business. We offer various business loan products tailored to your needs.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Personal Loans Card -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 text-indigo-700">
+                                <i class="fas fa-hand-holding-usd fa-lg"></i>
+                            </span>
+                            <span class="text-xl font-bold ml-4">Personal Loans</span>
+                        </div>
+                        <p class="text-gray-600">
+                            Meet your personal financial goals with flexible personal loans for weddings, travel, education, or any other need.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Car Loans Card -->
+                <div class="bg-gray-200 p-8 rounded-2xl shadow-lg text-gray-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gray-300 text-indigo-700">
+                                <i class="fas fa-car fa-lg"></i>
+                            </span>
+                            <span class="text-xl font-bold ml-4">Car Loans</span>
+                        </div>
+                        <p class="text-gray-600">
+                            Drive your dream car home with our hassle-free car loan options, featuring flexible repayment plans and low interest rates.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Features Section -->
+    <section id="about" class="bg-white py-16 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-gray-200 text-gray-600 px-4 py-1 rounded-full text-sm font-semibold mb-4">Our process</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold">Your journey to a better financial future</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-user-check fa-2x text-indigo-700"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Quick Eligibility Check</h3>
+                    <p class="text-gray-600">
+                        We help you understand your eligibility for various financial products without any paperwork upfront.
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-lime-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line fa-2x text-lime-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Transparent and Secure</h3>
+                    <p class="text-gray-600">
+                        Our process is fully transparent, ensuring you get the best terms and rates with complete security.
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-headset fa-2x text-purple-700"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Dedicated Support</h3>
+                    <p class="text-gray-600">
+                        From application to disbursement, our team provides dedicated support every step of the way.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banking Partners Section -->
+    <section class="bg-white py-16 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto text-center">
+            <span class="inline-block bg-gray-200 text-gray-600 px-4 py-1 rounded-full text-sm font-semibold mb-4">Our Partners</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-12">Partnered with India's leading banks</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-center">
+                <div class="flex justify-center items-center h-16">
+                    <p class="text-2xl font-bold" style="color: #004C8F;">HDFC Bank</p>
+                </div>
+                <div class="flex justify-center items-center h-16">
+                    <p class="text-2xl font-bold" style="color: #F06321;">ICICI Bank</p>
+                </div>
+                <div class="flex justify-center items-center h-16">
+                    <p class="text-2xl font-bold" style="color: #00B5EF;">SBI</p>
+                </div>
+                <div class="flex justify-center items-center h-16">
+                    <p class="text-2xl font-bold" style="color: #800000;">Axis Bank</p>
+                </div>
+                <div class="flex justify-center items-center h-16">
+                    <p class="text-2xl font-bold" style="color: #ED1C24;">Kotak</p>
+                </div>
+                <div class="flex justify-center items-center h-16">
+                    <p class="text-2xl font-bold" style="color: #BC8CBF;">IDFC First</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="bg-gray-100 py-16 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-gray-200 text-gray-600 px-4 py-1 rounded-full text-sm font-semibold mb-4">Testimonials</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold">What our clients say</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial Card 1 -->
+                <div class="bg-indigo-700 text-white p-8 rounded-2xl shadow-lg transition-transform md:transform md:-rotate-3 md:hover:rotate-0">
+                    <p class="mb-6 italic">
+                        "FinFree made the process of getting a personal loan incredibly easy. Their team was professional and guided me every step of the way. Highly recommend them!"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/50x50/FFFFFF/334155?text=AV" alt="Client Avatar" class="rounded-full mr-4">
+                        <div>
+                            <p class="font-bold">Ananya Verma</p>
+                            <p class="text-sm text-gray-300">Software Engineer, Bangalore</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial Card 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg transform hover:scale-105 transition-transform z-10">
+                    <p class="mb-6 italic">
+                        "I needed a business loan for my startup and was overwhelmed by the options. FinFree helped me compare different banks and secure the best rate. A true partner!"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/50x50/FFFFFF/334155?text=SK" alt="Client Avatar" class="rounded-full mr-4">
+                        <div>
+                            <p class="font-bold">Suresh Kumar</p>
+                            <p class="text-sm text-gray-500">Startup Founder, Bangalore</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial Card 3 -->
+                <div class="bg-lime-400 p-8 rounded-2xl shadow-lg transition-transform text-gray-800 md:transform md:rotate-3 md:hover:rotate-0">
+                    <p class="mb-6 italic">
+                        "The doorstep service was a lifesaver. FinFree's agent came to my office, collected all the documents, and made the credit card application seamless. Fantastic service!"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/50x50/FFFFFF/334155?text=RJ" alt="Client Avatar" class="rounded-full mr-4">
+                        <div>
+                            <p class="font-bold">Rhea Jain</p>
+                            <p class="text-sm text-gray-700">Marketing Manager, Bangalore</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Articles Section -->
+    <section id="blog" class="bg-white py-16 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-gray-200 text-gray-600 px-4 py-1 rounded-full text-sm font-semibold mb-4">Articles</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold">Read our latest insights</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article Card 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <img src="https://placehold.co/600x400/D1D5DB/6B7280?text=Finance+Article" alt="Finance Article" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <div class="flex items-center text-sm text-gray-500 mb-2">
+                        <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full">Finance</span>
+                        <span class="mx-2">•</span>
+                        <span>May 20, 2024</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Top tips for getting a home loan in Bangalore</h3>
+                    <p class="text-gray-600">
+                        Navigate the complexities of property financing with our expert guide to securing a home loan with the best interest rates.
+                    </p>
+                </div>
+                <!-- Article Card 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <img src="https://placehold.co/600x400/D1D5DB/6B7280?text=Credit+Score" alt="Credit Score Article" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <div class="flex items-center text-sm text-gray-500 mb-2">
+                        <span class="bg-lime-100 text-lime-700 px-2 py-1 rounded-full">Credit</span>
+                        <span class="mx-2">•</span>
+                        <span>May 15, 2024</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Understanding your credit score and why it matters</h3>
+                    <p class="text-gray-600">
+                        Learn how to improve and maintain a healthy credit score to unlock better financial opportunities.
+                    </p>
+                </div>
+                <!-- Article Card 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <img src="https://placehold.co/600x400/D1D5DB/6B7280?text=Investments" alt="Investment Article" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <div class="flex items-center text-sm text-gray-500 mb-2">
+                        <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Investments</span>
+                        <span class="mx-2">•</span>
+                        <span>May 10, 2024</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Smart savings strategies for young professionals in Bangalore</h3>
+                    <p class="text-gray-600">
+                        Start building wealth early with these simple yet effective saving and investment techniques tailored for city life.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-indigo-950 text-white py-16 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <!-- Newsletter -->
+            <div>
+                <h3 class="text-2xl font-bold mb-4">Subscribe to our newsletter</h3>
+                <p class="text-gray-400 mb-6">
+                    Stay informed with the latest financial news, tips, and exclusive offers.
+                </p>
+                <div class="flex">
+                    <input type="email" placeholder="Enter email address" class="p-4 rounded-l-lg bg-indigo-800 border-none outline-none text-white w-full">
+                    <button class="bg-lime-400 text-indigo-950 p-4 rounded-r-lg font-bold hover:bg-lime-300 transition-colors">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xl font-bold mb-4">Quick links</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#hero" class="hover:text-white">Home</a></li>
+                    <li><a href="#about" class="hover:text-white">About us</a></li>
+                    <li><a href="#services" class="hover:text-white">Services</a></li>
+                    <li><a href="#blog" class="hover:text-white">Blog</a></li>
+                    <li><a href="#contact" class="hover:text-white">Contact us</a></li>
+                </ul>
+            </div>
+            
+            <!-- Contact Us -->
+            <div>
+                <h3 class="text-xl font-bold mb-4">Contact us</h3>
+                <address class="space-y-2 text-gray-400 not-italic">
+                    <p>123 Financial Tower, MG Road, Bangalore</p>
+                    <p>Karnataka, India 560001</p>
+                    <p><a href="tel:+919876543210" class="hover:text-white">+91 98765 43210</a></p>
+                    <p><a href="mailto:support@finfree.com" class="hover:text-white">support@finfree.com</a></p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </address>
+            </div>
+        </div>
+        
+        <!-- Bottom Footer -->
+        <div class="border-t border-indigo-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+            <p>Copyright &copy; 2024 FinFree. All rights reserved.</p>
+            <div class="space-x-4 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white">Privacy policy</a>
+                <a href="#" class="hover:text-white">Terms & conditions</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>]]>
