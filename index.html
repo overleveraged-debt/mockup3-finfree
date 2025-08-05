@@ -1,4 +1,4 @@
-<![CDATA[<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,55 +6,65 @@
     <title>FinFree - Your Financial Freedom Partner</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-image: url(https://www.transparenttextures.com/patterns/cream-paper.png);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="text-gray-800 pt-28">
     <!-- Header/Nav -->
-    <header class="bg-gray-100/60 backdrop-blur-xl py-2 px-4 flex justify-between items-center shadow-lg fixed top-4 left-4 right-4 z-20 rounded-full">
+    <header class="bg-gray-100/60 backdrop-blur-xl py-2 px-4 flex justify-between items-center shadow-lg fixed top-4 left-4 right-4 z-20 rounded-full" role="banner">
         <!-- Logo -->
         <a href="#" class="flex-shrink-0">
             <div class="text-2xl font-bold text-indigo-700">FinFree</div>
         </a>
 
         <!-- Desktop Nav -->
-        <div class="hidden lg:flex flex-grow items-center mx-4 bg-white rounded-full shadow-inner overflow-hidden h-14">
+        <nav class="hidden lg:flex flex-grow items-center mx-4 bg-white rounded-full shadow-inner overflow-hidden h-14" aria-label="Main">
             <!-- Text Links -->
-            <nav class="flex items-center pl-2">
+            <div class="flex items-center pl-2">
                 <a href="#hero" class="px-4 py-2 text-gray-600 hover:text-indigo-700 font-medium rounded-full hover:bg-gray-100 transition-colors">Home</a>
                 <a href="#about" class="px-4 py-2 text-gray-600 hover:text-indigo-700 font-medium rounded-full hover:bg-gray-100 transition-colors">About</a>
                 <a href="#blog" class="px-4 py-2 text-gray-600 hover:text-indigo-700 font-medium rounded-full hover:bg-gray-100 transition-colors">Blog</a>
-            </nav>
+            </div>
             <!-- Gradient Bar for Service -->
             <div class="flex-grow h-full bg-gradient-to-r from-white/10 via-blue-200 to-blue-500 flex justify-end items-center rounded-r-full">
                 <a href="#services" class="px-6 py-2 text-white font-semibold">Service</a>
             </div>
-        </div>
+        </nav>
         
         <!-- Contact Button -->
         <a href="#contact" class="hidden sm:flex flex-shrink-0 bg-blue-600 text-white px-6 h-14 items-center justify-center rounded-full font-semibold shadow-md hover:bg-blue-700 transition-colors">CONTACT</a>
 
         <!-- Mobile Menu Button -->
         <div class="lg:hidden">
-            <button class="w-14 h-14 flex items-center justify-center">
+            <button id="mobile-menu-button" class="w-14 h-14 flex items-center justify-center" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="sr-only">Open main menu</span>
                 <i class="fas fa-bars text-2xl text-gray-700"></i>
             </button>
         </div>
     </header>
 
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 bg-gray-800/75 z-10" role="dialog" aria-modal="true">
+        <div id="mobile-menu-panel" class="fixed top-0 right-0 bottom-0 bg-white w-64 p-8 shadow-lg transform transition-transform duration-300 ease-in-out translate-x-full">
+            <button id="mobile-menu-close" class="absolute top-4 right-4 w-10 h-10 flex items-center justify-center">
+                <span class="sr-only">Close menu</span>
+                <i class="fas fa-times text-2xl text-gray-700"></i>
+            </button>
+            <nav class="flex flex-col space-y-4 mt-10" aria-label="Mobile">
+                <a href="#hero" class="text-gray-600 hover:text-indigo-700 font-medium">Home</a>
+                <a href="#about" class="text-gray-600 hover:text-indigo-700 font-medium">About</a>
+                <a href="#services" class="text-gray-600 hover:text-indigo-700 font-medium">Service</a>
+                <a href="#blog" class="text-gray-600 hover:text-indigo-700 font-medium">Blog</a>
+                <a href="#contact" class="mt-4 bg-blue-600 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-blue-700 transition-colors text-center">CONTACT</a>
+            </nav>
+        </div>
+    </div>
+
     <!-- Hero Section -->
-    <section id="hero" class="bg-white py-16 px-6 md:px-12">
+    <main role="main">
+    <section id="hero" class="bg-off-white py-16 px-6 md:px-12" aria-labelledby="hero-heading">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-12">
             <div>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
+                <h1 id="hero-heading" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
                     Your path to financial freedom<br>begins here.
                 </h1>
                 <p class="text-lg text-gray-600 mb-8">
@@ -69,7 +79,8 @@
             </div>
             <div class="relative hidden md:block">
                 <!-- Improved SVG of a phone and cards -->
-                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto" role="img" aria-labelledby="svg-title">
+                <title id="svg-title">Illustration of a smartphone and credit cards</title>
                     <defs>
                         <linearGradient id="phoneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                             <stop offset="0%" style="stop-color:#a5b4fc;stop-opacity:1" />
@@ -152,11 +163,11 @@
     </section>
 
     <!-- Key Features Section (Updated) -->
-    <section id="services" class="bg-white py-16 px-6 md:px-12">
+    <section id="services" class="bg-off-white py-16 px-6 md:px-12" aria-labelledby="services-heading">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12">
                 <span class="inline-block bg-gray-200 text-gray-600 px-4 py-1 rounded-full text-sm font-semibold mb-4">Loan Services</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold mb-2">Our comprehensive loan solutions</h2>
+                <h2 id="services-heading" class="text-3xl sm:text-4xl font-extrabold mb-2">Our comprehensive loan solutions</h2>
                 <p class="text-gray-500 max-w-2xl mx-auto">Find the perfect loan for your needs with expert guidance and seamless processing.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -224,11 +235,11 @@
     </section>
 
     <!-- More Features Section -->
-    <section id="about" class="bg-white py-16 px-6 md:px-12">
+    <section id="about" class="bg-off-white py-16 px-6 md:px-12" aria-labelledby="about-heading">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12">
                 <span class="inline-block bg-gray-200 text-gray-600 px-4 py-1 rounded-full text-sm font-semibold mb-4">Our process</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold">Your journey to a better financial future</h2>
+                <h2 id="about-heading" class="text-3xl sm:text-4xl font-extrabold">Your journey to a better financial future</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                 <!-- Card 1 -->
@@ -266,10 +277,10 @@
     </section>
 
     <!-- Banking Partners Section -->
-    <section class="bg-white py-16 px-6 md:px-12">
+    <section class="bg-off-white py-16 px-6 md:px-12" aria-labelledby="partners-heading">
         <div class="max-w-7xl mx-auto text-center">
             <span class="inline-block bg-gray-200 text-gray-600 px-4 py-1 rounded-full text-sm font-semibold mb-4">Our Partners</span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold mb-12">Partnered with India's leading banks</h2>
+            <h2 id="partners-heading" class="text-3xl sm:text-4xl font-extrabold mb-12">Partnered with India's leading banks</h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-center">
                 <div class="flex justify-center items-center h-16">
                     <p class="text-2xl font-bold" style="color: #004C8F;">HDFC Bank</p>
@@ -294,11 +305,11 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="bg-gray-100 py-16 px-6 md:px-12">
+    <section class="bg-off-gray-100 py-16 px-6 md:px-12" aria-labelledby="testimonials-heading">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12">
                 <span class="inline-block bg-gray-200 text-gray-600 px-4 py-1 rounded-full text-sm font-semibold mb-4">Testimonials</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold">What our clients say</h2>
+                <h2 id="testimonials-heading" class="text-3xl sm:text-4xl font-extrabold">What our clients say</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Testimonial Card 1 -->
@@ -307,7 +318,7 @@
                         "FinFree made the process of getting a personal loan incredibly easy. Their team was professional and guided me every step of the way. Highly recommend them!"
                     </p>
                     <div class="flex items-center">
-                        <img src="https://placehold.co/50x50/FFFFFF/334155?text=AV" alt="Client Avatar" class="rounded-full mr-4">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=50&h=50&fit=crop&q=80" alt="Client Avatar" class="rounded-full mr-4">
                         <div>
                             <p class="font-bold">Ananya Verma</p>
                             <p class="text-sm text-gray-300">Software Engineer, Bangalore</p>
@@ -320,7 +331,7 @@
                         "I needed a business loan for my startup and was overwhelmed by the options. FinFree helped me compare different banks and secure the best rate. A true partner!"
                     </p>
                     <div class="flex items-center">
-                        <img src="https://placehold.co/50x50/FFFFFF/334155?text=SK" alt="Client Avatar" class="rounded-full mr-4">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=50&h=50&fit=crop&q=80" alt="Client Avatar" class="rounded-full mr-4">
                         <div>
                             <p class="font-bold">Suresh Kumar</p>
                             <p class="text-sm text-gray-500">Startup Founder, Bangalore</p>
@@ -333,7 +344,7 @@
                         "The doorstep service was a lifesaver. FinFree's agent came to my office, collected all the documents, and made the credit card application seamless. Fantastic service!"
                     </p>
                     <div class="flex items-center">
-                        <img src="https://placehold.co/50x50/FFFFFF/334155?text=RJ" alt="Client Avatar" class="rounded-full mr-4">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=50&h=50&fit=crop&q=80" alt="Client Avatar" class="rounded-full mr-4">
                         <div>
                             <p class="font-bold">Rhea Jain</p>
                             <p class="text-sm text-gray-700">Marketing Manager, Bangalore</p>
@@ -345,16 +356,16 @@
     </section>
 
     <!-- Latest Articles Section -->
-    <section id="blog" class="bg-white py-16 px-6 md:px-12">
+    <section id="blog" class="bg-off-white py-16 px-6 md:px-12" aria-labelledby="blog-heading">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12">
                 <span class="inline-block bg-gray-200 text-gray-600 px-4 py-1 rounded-full text-sm font-semibold mb-4">Articles</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold">Read our latest insights</h2>
+                <h2 id="blog-heading" class="text-3xl sm:text-4xl font-extrabold">Read our latest insights</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Article Card 1 -->
                 <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                    <img src="https://placehold.co/600x400/D1D5DB/6B7280?text=Finance+Article" alt="Finance Article" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=600&h=400&fit=crop&q=80" alt="Finance Article" class="rounded-lg mb-4 w-full h-48 object-cover">
                     <div class="flex items-center text-sm text-gray-500 mb-2">
                         <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full">Finance</span>
                         <span class="mx-2">•</span>
@@ -367,7 +378,7 @@
                 </div>
                 <!-- Article Card 2 -->
                 <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                    <img src="https://placehold.co/600x400/D1D5DB/6B7280?text=Credit+Score" alt="Credit Score Article" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9?w=600&h=400&fit=crop&q=80" alt="Credit Score Article" class="rounded-lg mb-4 w-full h-48 object-cover">
                     <div class="flex items-center text-sm text-gray-500 mb-2">
                         <span class="bg-lime-100 text-lime-700 px-2 py-1 rounded-full">Credit</span>
                         <span class="mx-2">•</span>
@@ -380,7 +391,7 @@
                 </div>
                 <!-- Article Card 3 -->
                 <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                    <img src="https://placehold.co/600x400/D1D5DB/6B7280?text=Investments" alt="Investment Article" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=400&fit=crop&q=80" alt="Investment Article" class="rounded-lg mb-4 w-full h-48 object-cover">
                     <div class="flex items-center text-sm text-gray-500 mb-2">
                         <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Investments</span>
                         <span class="mx-2">•</span>
@@ -396,7 +407,7 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="bg-indigo-950 text-white py-16 px-6 md:px-12">
+    <footer id="contact" class="bg-indigo-950 text-white py-16 px-6 md:px-12 rounded-t-[4rem] rounded-b-[4rem] shadow-2xl mt-16 mx-4 mb-4">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
             <!-- Newsletter -->
             <div>
@@ -405,8 +416,8 @@
                     Stay informed with the latest financial news, tips, and exclusive offers.
                 </p>
                 <div class="flex">
-                    <input type="email" placeholder="Enter email address" class="p-4 rounded-l-lg bg-indigo-800 border-none outline-none text-white w-full">
-                    <button class="bg-lime-400 text-indigo-950 p-4 rounded-r-lg font-bold hover:bg-lime-300 transition-colors">
+                    <input type="email" placeholder="Enter email address" class="p-4 rounded-l-lg bg-indigo-800 border-none outline-none text-white w-full" aria-label="Email Address">
+                    <button class="bg-lime-400 text-indigo-950 p-4 rounded-r-lg font-bold hover:bg-lime-300 transition-colors" aria-label="Subscribe">
                         <i class="fas fa-arrow-right"></i>
                     </button>
                 </div>
@@ -451,5 +462,7 @@
             </div>
         </div>
     </footer>
+    </main>
+    <script src="script.js"></script>
 </body>
-</html>]]>
+</html>
